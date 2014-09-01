@@ -1,0 +1,22 @@
+<div class="header">
+  <h3>ABC Music Player</h3>
+</div>
+
+<div class="form-horizontal">
+  <textarea ng-class="validAbcMusic ? 'valid' : 'invalid'" ng-model="abcMusicString" rows="12" class="form-control">
+  </textarea>
+</div>
+
+<br>
+<h3>
+  {{ parserStatus }}
+</h3>
+<br>
+<button ng-hide="isPlayingSong" ng-disabled="!validAbcMusic" class="btn btn-block btn-lg btn-success" ng-click="playSong()">Play</button>
+<button ng-show="isPlayingSong" class="btn btn-block btn-lg btn-danger" ng-click="stopSong()">Stop</button>
+<br>
+<br>
+
+<div class="footer">
+  <p>♥ from the Yeoman team</p>
+</div>
